@@ -7,7 +7,7 @@ import bgui.control;
 import bgui.events;
 import bgui.point;
 
-import bgui.image;
+import bgui.controls.image;
 
 /**
 *	An image button control.
@@ -74,4 +74,8 @@ public:
 	*	The event to trigger when the image button is clicked.
 	*/
 	Action onClick;
+	
+	override void draw(RenderWindow window) {
+		super.draw(window);
+	}
 }

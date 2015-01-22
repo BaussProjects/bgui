@@ -8,6 +8,7 @@ import bgui.point;
 import bgui.space;
 import bgui.screen;
 import bgui.events;
+import bgui.borders;
 
 /**
 *	Exception thrown when there's a draw error.
@@ -46,6 +47,8 @@ private:
 	*	Boolean determining whether the control is enabled or not.
 	*/
 	bool m_enabled = true;
+	
+	BorderSingle m_borderSingle;
 protected:
 	/**
 	*	Creates a new instance of Control.
@@ -115,6 +118,21 @@ public:
 		*/
 		void enabled(bool newEnableState) {
 			m_enabled = newEnableState;
+		}
+		
+		BorderSingle borderSingle() { return m_borderSingle; }
+		
+		void borderSingle(BorderSingle newBorder) {
+			if (newBorder is null) {
+				m_position = new Point(m_position.x - 1, m_position.y - 1);
+				m_borderSingle = null;
+			}
+			else {
+				m_borderSingle = newBorder;
+				m_borderSingle.position = m_position;
+				position = new Point(m_position.x + 1, m_position.y + 1);
+				m_borderSingle.size = new Point(m_size.x + 2, m_size.y + 2);
+			}
 		}
 	}
 	

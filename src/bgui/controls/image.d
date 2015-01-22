@@ -1,4 +1,4 @@
-module bgui.image;
+module bgui.controls.image;
 
 import dsfml.graphics;
 import dsfml.system;
@@ -71,5 +71,7 @@ public:
 	*/
 	override void draw(RenderWindow window) {
 		window.draw(m_sprite);
+		if (borderSingle)
+			borderSingle.draw(window);
 	}
 }
