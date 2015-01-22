@@ -16,7 +16,7 @@ void main() {
 
 	import bgui.controls.fancybutton;
 	import bgui.controls.image;
-	// Creates a newbutton with the text "Click"
+	// Creates a new fancy button
 	scope auto btn = new FancyButton("btn",
 		new Image("", "login_btn.png"),
 		new Image("", "login_btn_click.png"),
