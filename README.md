@@ -1,6 +1,11 @@
 # bgui
 ## GUI Library written in the D Programming Language based on SFML
 
+### This is no longer in development
+### Please view its successor:
+### https://github.com/BaussProjects/AeriGUI
+
+
 Original dsfml source here: https://github.com/Jebbs/DSFML
 
 This library is still under development and is not yet "usable".
